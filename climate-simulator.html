@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Build your future: adjust solar, green area and LED conversion sliders and watch the projected impact update live.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23AE0025'/%3E%3Cpath d='M32 12c11 6 16 14 16 22a16 16 0 1 1-32 0c0-8 5-16 16-22Z' fill='white'/%3E%3Ccircle cx='32' cy='38' r='6' fill='%23AE0025'/%3E%3C/svg%3E">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Climate Simulator — RE:IMAGINE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#e8e8e6",
+                      "primary-container": "#dc0032",
+                      "primary-fixed-dim": "#ffb3b1",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "error-container": "#ffdad6",
+                      "inverse-surface": "#2f3130",
+                      "on-background": "#1a1c1b",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "outline": "#926e6d",
+                      "inverse-primary": "#ffb3b1",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-surface-variant": "#5d3f3e",
+                      "on-primary-fixed": "#410008",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#dadad8",
+                      "surface-bright": "#f9f9f7",
+                      "tertiary": "#545656",
+                      "inverse-on-surface": "#f1f1ef",
+                      "secondary-fixed": "#e5e2e1",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#e7bcbb",
+                      "primary-fixed": "#ffdad8",
+                      "surface-container-low": "#f4f4f2",
+                      "on-error": "#ffffff",
+                      "background": "#f9f9f7",
+                      "secondary": "#5f5e5e",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface": "#f9f9f7",
+                      "on-tertiary-container": "#f1f1f1",
+                      "on-primary-container": "#ffedec",
+                      "surface-container-highest": "#e2e3e1",
+                      "surface-container": "#eeeeec",
+                      "on-secondary-container": "#656464",
+                      "on-primary-fixed-variant": "#92001e",
+                      "surface-tint": "#bf002a",
+                      "surface-variant": "#e2e3e1",
+                      "primary": "#ae0025",
+                      "secondary-container": "#e5e2e1",
+                      "on-secondary-fixed-variant": "#474646",
+                      "on-surface": "#1a1c1b",
+                      "on-error-container": "#93000a",
+                      "tertiary-container": "#6c6e6e",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "tertiary-fixed": "#e2e2e2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "section-gap": "160px",
+                      "margin-mobile": "20px",
+                      "container-max": "1440px",
+                      "gutter": "24px",
+                      "margin-desktop": "80px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["IBM Plex Sans"],
+                      "display-lg": ["IBM Plex Sans"],
+                      "body-md": ["IBM Plex Sans"],
+                      "headline-md": ["IBM Plex Sans"],
+                      "data-tabular": ["IBM Plex Sans"],
+                      "body-lg": ["IBM Plex Sans"],
+                      "label-caps": ["IBM Plex Sans"],
+                      "headline-lg": ["IBM Plex Sans"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                      "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                      "data-tabular": ["20px", { "lineHeight": "1.0", "fontWeight": "500" }],
+                      "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                      "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Custom styles for precise range slider control, mirroring high-end equipment */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #ffffff;
+            cursor: pointer;
+            margin-top: -10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            border: 1px solid #c8c6c5;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #c8c6c5;
+            border-radius: 2px;
+        }
+        
+        /* The active portion of the track will be handled by JS for a dynamic fill effect */
+    </style>
+</head>
+<body class="bg-[#F7F7F5] text-on-surface font-body-md antialiased overflow-x-hidden min-h-screen">
+<!-- Site Navigation (generated) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl shadow-sm hidden md:flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto left-0 right-0">
+<a class="font-display-lg text-headline-md tracking-tighter text-on-surface dark:text-inverse-on-surface" href="index.html">RE:IMAGINE</a>
+<nav class="flex gap-6 items-center">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary-container transition-colors duration-200 font-body-md text-body-md pb-1" href="climate-time-machine.html">Climate Time Machine</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary-container transition-colors duration-200 font-body-md text-body-md pb-1" href="eco-learning-zones.html">7 Zones</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary-container transition-colors duration-200 font-body-md text-body-md pb-1" href="solar-pavilion.html">Solar Pavilion</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary-container transition-colors duration-200 font-body-md text-body-md pb-1" href="future-comparison.html">Future Comparison</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary transition-colors duration-200 font-body-md text-body-md pb-1" href="climate-simulator.html">Climate Simulator</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary-container transition-colors duration-200 font-body-md text-body-md pb-1" href="impact-journey.html">My Impact</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary-container transition-colors duration-200 font-body-md text-body-md pb-1" href="energy-walk.html">Energy Walk</a>
+</nav>
+<a class="bg-primary text-on-primary font-label-caps text-label-caps px-6 py-3 rounded-full hover:bg-primary-container transition-colors" href="future-comparison.html">DESIGN THE FUTURE</a>
+</header>
+<aside class="fixed left-0 top-1/2 -translate-y-1/2 h-auto py-8 rounded-r-lg bg-transparent z-40 hidden md:flex flex-col gap-6 w-24">
+<div class="px-4 mb-2 text-center">
+<span class="block font-label-caps text-[10px] tracking-widest text-secondary">ECO PARK PROGRESS</span>
+<span class="font-display-lg text-headline-md text-primary">JOURNEY</span>
+</div>
+<nav class="flex flex-col gap-6">
+<a class="flex flex-col items-center gap-1 text-outline pr-4 hover:text-primary-container transition-all group" href="climate-time-machine.html" title="Climate Time Machine">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 0;">visibility</span>
+<span class="font-label-caps text-[10px] tracking-wider">SEE</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-outline pr-4 hover:text-primary-container transition-all group" href="eco-learning-zones.html" title="7 Zones">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 0;">menu_book</span>
+<span class="font-label-caps text-[10px] tracking-wider">UNDERSTAND</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-outline pr-4 hover:text-primary-container transition-all group" href="solar-pavilion.html" title="Solar Pavilion">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 0;">explore</span>
+<span class="font-label-caps text-[10px] tracking-wider">EXPERIENCE</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-outline pr-4 hover:text-primary-container transition-all group" href="future-comparison.html" title="Future Comparison">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 0;">touch_app</span>
+<span class="font-label-caps text-[10px] tracking-wider">CHOOSE</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary border-r-4 border-primary pr-4 transition-all scale-95" href="climate-simulator.html" title="Climate Simulator">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label-caps text-[10px] tracking-wider font-bold">SIMULATE</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-outline pr-4 hover:text-primary-container transition-all group" href="impact-journey.html" title="My Impact">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 0;">eco</span>
+<span class="font-label-caps text-[10px] tracking-wider">IMPACT</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-outline pr-4 hover:text-primary-container transition-all group" href="energy-walk.html" title="Energy Walk">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 0;">bolt</span>
+<span class="font-label-caps text-[10px] tracking-wider">ACTION</span>
+</a>
+</nav>
+</aside>
+<!-- Mobile top bar -->
+<header class="fixed top-0 w-full z-50 flex md:hidden items-center justify-between px-5 py-4 bg-surface/95 dark:bg-surface-dim/95 backdrop-blur-md border-b border-surface-variant">
+<a class="font-display-lg text-headline-md tracking-tighter text-on-surface" href="index.html">RE:IMAGINE</a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="flex items-center justify-center w-10 h-10 rounded-full border border-surface-variant text-on-surface" id="mobile-menu-btn" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<!-- Mobile slide-down menu -->
+<div class="fixed inset-0 z-[60] bg-surface hidden flex-col p-6 overflow-y-auto md:hidden" id="mobile-menu">
+<div class="flex items-center justify-between mb-8">
+<span class="font-display-lg text-headline-md text-on-surface">RE:IMAGINE</span>
+<button aria-label="Close menu" class="flex items-center justify-center w-10 h-10 rounded-full border border-surface-variant text-on-surface" id="mobile-menu-close" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="index.html">
+<span class="material-symbols-outlined text-primary">home</span>
+<span class="font-body-lg text-body-lg">Home</span>
+</a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="climate-time-machine.html">
+<span class="material-symbols-outlined text-primary">visibility</span>
+<span class="font-body-lg text-body-lg">Climate Time Machine</span>
+</a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="eco-learning-zones.html">
+<span class="material-symbols-outlined text-primary">menu_book</span>
+<span class="font-body-lg text-body-lg">7 Zones</span>
+</a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="solar-pavilion.html">
+<span class="material-symbols-outlined text-primary">explore</span>
+<span class="font-body-lg text-body-lg">Solar Pavilion</span>
+</a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="future-comparison.html">
+<span class="material-symbols-outlined text-primary">touch_app</span>
+<span class="font-body-lg text-body-lg">Future Comparison</span>
+</a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-primary font-bold" href="climate-simulator.html">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<span class="font-body-lg text-body-lg">Climate Simulator</span>
+</a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="impact-journey.html">
+<span class="material-symbols-outlined text-primary">eco</span>
+<span class="font-body-lg text-body-lg">My Impact</span>
+</a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="energy-walk.html">
+<span class="material-symbols-outlined text-primary">bolt</span>
+<span class="font-body-lg text-body-lg">Energy Walk</span>
+</a>
+<a class="mt-8 text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-4 rounded-full" href="future-comparison.html">DESIGN THE FUTURE</a>
+</div>
+<script>
+(function() {
+    var btn = document.getElementById('mobile-menu-btn');
+    var closeBtn = document.getElementById('mobile-menu-close');
+    var menu = document.getElementById('mobile-menu');
+    if (!btn || !menu) return;
+    function openMenu() {
+        menu.classList.remove('hidden');
+        menu.classList.add('flex');
+        btn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+        btn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+    btn.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+})();
+</script>
+
+<main class="md:ml-32 pt-24 md:pt-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-section-gap">
+<!-- Header Section -->
+<header class="mb-16">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">BUILD YOUR FUTURE</h1>
+<p class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary">What if you could redesign the future?</p>
+</header>
+<!-- Split Screen Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Side: Controls -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<div class="bg-surface-container-lowest rounded-lg border border-secondary-fixed p-8 shadow-[0px_10px_30px_rgba(0,0,0,0.04)]">
+<h2 class="font-headline-md text-headline-md mb-8">Simulation Parameters</h2>
+<!-- Slider 1: Solar PV -->
+<div class="mb-8">
+<div class="flex justify-between items-end mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="solar_power">solar_power</span>
+<label class="font-body-lg text-body-lg text-on-surface">Solar PV Expansion</label>
+</div>
+<span class="font-data-tabular text-data-tabular text-primary-container">
+<span id="val-solar">250</span> kWp
+                            </span>
+</div>
+<input class="w-full" id="slider-solar" max="500" min="0" type="range" value="250">
+<div class="flex justify-between mt-2 font-label-caps text-label-caps text-secondary">
+<span>0</span>
+<span>500</span>
+</div>
+</div>
+<!-- Slider 2: Green Area -->
+<div class="mb-8">
+<div class="flex justify-between items-end mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="park">park</span>
+<label class="font-body-lg text-body-lg text-on-surface">Green Area Addition</label>
+</div>
+<span class="font-data-tabular text-data-tabular text-primary-container">
+<span id="val-green">2500</span> m²
+                            </span>
+</div>
+<input class="w-full" id="slider-green" max="5000" min="0" type="range" value="2500">
+<div class="flex justify-between mt-2 font-label-caps text-label-caps text-secondary">
+<span>0</span>
+<span>5000</span>
+</div>
+</div>
+<!-- Slider 3: LED Conversion -->
+<div class="mb-8">
+<div class="flex justify-between items-end mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="lightbulb">lightbulb</span>
+<label class="font-body-lg text-body-lg text-on-surface">LED Conversion Rate</label>
+</div>
+<span class="font-data-tabular text-data-tabular text-primary-container">
+<span id="val-led">50</span>%
+                            </span>
+</div>
+<input class="w-full" id="slider-led" max="100" min="0" type="range" value="50">
+<div class="flex justify-between mt-2 font-label-caps text-label-caps text-secondary">
+<span>0%</span>
+<span>100%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Impact Dashboard -->
+<div class="lg:col-span-7 flex flex-col gap-8">
+<!-- Map / Visualization Area -->
+<div class="relative w-full h-[400px] rounded-lg overflow-hidden border border-secondary-fixed shadow-[0px_10px_30px_rgba(0,0,0,0.04)] bg-surface-container-high">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full opacity-50 mix-blend-multiply" data-alt="A highly detailed, technical architectural schematic or abstract data visualization map of an eco-park facility. The visualization is rendered in a minimalist, light-mode style with a pristine white and light grey base. Thin, precise geometric lines trace the infrastructure. Vivid, glowing accents in a striking primary red (#DC0032) highlight active energy nodes, solar arrays, and green zones. The overall aesthetic is high-tech, precise, and distinctly modern corporate, conveying environmental stewardship through industrial design." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqxxNrQW4PJY7oiue0oicAR-GXCn0nAk_4isEhzAAmmPR4de6jCtZepuxdeZbMdAf-XN--bNxMZsO5nt6Hqn0f3yQAVsNbU-2XUww5Gw9r3zvRP4WeSuIP4b5z442G3Ge5FsZKEOdMdqZfoxElOfoW_e2P2wOXP9ICWW5AalewcVCLkiPPBctB7XV8Aoj_BQeTsNNcw4oH7wLW9asddRwKH2IQTjFBkkE_05jwAHbGewSRiXc0Gw59gg')"></div>
+<!-- Glassmorphic Overlay for key stat -->
+<div class="absolute bottom-6 left-6 p-6 rounded-xl bg-white/80 backdrop-blur-[20px] border border-white/40 shadow-sm max-w-sm">
+<div class="font-label-caps text-label-caps text-secondary mb-2">PROJECTED ESG RATING</div>
+<div class="font-display-lg text-display-lg text-primary-container leading-none">AAA+</div>
+</div>
+</div>
+<!-- Bento Grid of Impact Metrics -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<!-- Metric Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg border border-secondary-fixed p-6 shadow-sm hover:scale-[1.02] transition-transform">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="co2">co2</span>
+<span class="font-label-caps text-label-caps text-secondary">CO₂ REDUCTION</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">
+<span class="text-primary-container font-data-tabular text-data-tabular">420</span> t/yr
+                        </div>
+</div>
+<!-- Metric Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg border border-secondary-fixed p-6 shadow-sm hover:scale-[1.02] transition-transform">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+<span class="font-label-caps text-label-caps text-secondary">ENERGY SAVED</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">
+<span class="text-primary-container font-data-tabular text-data-tabular">1.2</span> GWh
+                        </div>
+</div>
+<!-- Metric Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg border border-secondary-fixed p-6 shadow-sm hover:scale-[1.02] transition-transform">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="water_drop">water_drop</span>
+<span class="font-label-caps text-label-caps text-secondary">WATER SAVED</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">
+<span class="text-primary-container font-data-tabular text-data-tabular">850</span> kL
+                        </div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-tertiary-fixed-dim">Simulation Data - Estimated Impact based on ideal conditions.</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Site Footer (generated) -->
+<footer class="w-full py-20 bg-inverse-surface dark:bg-surface-container-highest relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-6 mb-8 md:mb-0">
+<a class="font-display-lg text-headline-md text-surface-bright mb-4 opacity-80 hover:opacity-100 transition-opacity inline-block" href="index.html">DENSO Eco Park</a>
+<p class="font-body-md text-body-md text-secondary-fixed-dim">
+© 2024 DENSO Eco Park. Pioneering environmental stewardship through industrial precision.
+</p>
+</div>
+<div class="md:col-span-6 flex flex-wrap gap-6 md:justify-end items-end">
+<a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-primary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-primary-fixed transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-primary-fixed transition-colors" href="#">Sustainability Report</a>
+<a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-primary-fixed transition-colors" href="mailto:hello@densoecopark.example">Contact Us</a>
+</div>
+</div>
+</footer>
+
+<!-- Footer -->
+
+<script>
+        // Simple script to update values when sliders move
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliders = [
+                { id: 'slider-solar', valId: 'val-solar' },
+                { id: 'slider-green', valId: 'val-green' },
+                { id: 'slider-led', valId: 'val-led' }
+            ];
+
+            sliders.forEach(s => {
+                const slider = document.getElementById(s.id);
+                const valDisplay = document.getElementById(s.valId);
+                
+                if(slider && valDisplay) {
+                    slider.addEventListener('input', (e) => {
+                        valDisplay.textContent = e.target.value;
+                        // Calculate percentage for background fill effect
+                        const value = (e.target.value - e.target.min) / (e.target.max - e.target.min) * 100;
+                        e.target.style.background = `linear-gradient(to right, #dc0032 0%, #dc0032 ${value}%, #c8c6c5 ${value}%, #c8c6c5 100%)`;
+                    });
+                    
+                    // Initialize background fill
+                    const initialValue = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+                    slider.style.background = `linear-gradient(to right, #dc0032 0%, #dc0032 ${initialValue}%, #c8c6c5 ${initialValue}%, #c8c6c5 100%)`;
+                }
+            });
+        });
+    </script>
+</body></html>
