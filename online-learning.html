@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Climate Time Machine — DENSO Eco Park</title>
-<meta name="description" content="Slide from 1980 to 2050 and choose Business as Usual or Climate Action to see how the next 25 years diverge.">
+<title>Online Learning — DENSO Eco Park</title>
+<meta name="description" content="Seven short lessons that go deeper on each of the Eco Park's learning zones.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23AE0025'/%3E%3Cpath d='M32 12c11 6 16 14 16 22a16 16 0 1 1-32 0c0-8 5-16 16-22Z' fill='white'/%3E%3Ccircle cx='32' cy='38' r='6' fill='%23AE0025'/%3E%3C/svg%3E">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -67,11 +67,7 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 .source-tag a { color:#AE0025; text-decoration:underline; text-underline-offset:2px; }
 </style>
 
-<style>
-.slider-thumb::-webkit-slider-thumb { -webkit-appearance:none; appearance:none; width:32px; height:32px; border-radius:50%; background:#fff; cursor:pointer; box-shadow:0px 4px 10px rgba(0,0,0,.15); border:2px solid #e5e2e1; }
-.scenario-btn { color: #5f5e5e; }
-.scenario-btn.active { background:#AE0025; color:#fff; }
-</style>
+
 </head>
 <body class="antialiased overflow-x-hidden min-h-screen text-on-surface">
 <!-- Site Navigation (generated v2) -->
@@ -80,11 +76,11 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 <nav class="flex gap-4 lg:gap-5 items-center mx-4 overflow-x-auto">
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="impact.html">Impact</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="zones.html">7 Zones</a>
-<a class="text-primary font-bold border-b-2 border-primary transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="climate-time-machine.html">Time Machine</a>
+<a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="climate-time-machine.html">Time Machine</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="live-dashboard.html">Live Dashboard</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="my-impact.html">My Impact</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="eco-habit.html">Eco Habit</a>
-<a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="online-learning.html">Learning</a>
+<a class="text-primary font-bold border-b-2 border-primary transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="online-learning.html">Learning</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="climate-challenge.html">Challenge</a>
 </nav>
 <a class="bg-primary text-on-primary font-label-caps text-label-caps px-5 py-2.5 rounded-full hover:bg-primary-container transition-colors shrink-0 whitespace-nowrap" href="climate-challenge.html">JOIN THE CHALLENGE</a>
@@ -93,11 +89,11 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 <nav class="flex flex-col gap-5">
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="impact.html" title="Impact"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">thermostat</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Impact</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="zones.html" title="7 Zones"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">grid_view</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">7 Zones</span></a>
-<a class="flex flex-col items-center gap-1 text-primary border-r-4 border-primary pr-3 scale-95" href="climate-time-machine.html" title="Time Machine"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span><span class="font-label-caps text-[9px] tracking-wide font-bold text-center leading-tight">Time Machine</span></a>
+<a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="climate-time-machine.html" title="Time Machine"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">visibility</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Time Machine</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="live-dashboard.html" title="Live Dashboard"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">analytics</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Live Dashboard</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="my-impact.html" title="My Impact"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">badge</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">My Impact</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="eco-habit.html" title="Eco Habit"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">task_alt</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Eco Habit</span></a>
-<a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="online-learning.html" title="Learning"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">school</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Learning</span></a>
+<a class="flex flex-col items-center gap-1 text-primary border-r-4 border-primary pr-3 scale-95" href="online-learning.html" title="Learning"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">school</span><span class="font-label-caps text-[9px] tracking-wide font-bold text-center leading-tight">Learning</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="climate-challenge.html" title="Challenge"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">emoji_events</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Challenge</span></a>
 </nav>
 </aside>
@@ -120,11 +116,11 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 </a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="impact.html"><span class="material-symbols-outlined text-primary">thermostat</span><span class="font-body-lg text-body-lg">Impact</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="zones.html"><span class="material-symbols-outlined text-primary">grid_view</span><span class="font-body-lg text-body-lg">7 Zones</span></a>
-<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-primary font-bold" href="climate-time-machine.html"><span class="material-symbols-outlined text-primary">visibility</span><span class="font-body-lg text-body-lg">Time Machine</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="climate-time-machine.html"><span class="material-symbols-outlined text-primary">visibility</span><span class="font-body-lg text-body-lg">Time Machine</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="live-dashboard.html"><span class="material-symbols-outlined text-primary">analytics</span><span class="font-body-lg text-body-lg">Live Dashboard</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="my-impact.html"><span class="material-symbols-outlined text-primary">badge</span><span class="font-body-lg text-body-lg">My Impact</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="eco-habit.html"><span class="material-symbols-outlined text-primary">task_alt</span><span class="font-body-lg text-body-lg">Eco Habit</span></a>
-<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="online-learning.html"><span class="material-symbols-outlined text-primary">school</span><span class="font-body-lg text-body-lg">Learning</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-primary font-bold" href="online-learning.html"><span class="material-symbols-outlined text-primary">school</span><span class="font-body-lg text-body-lg">Learning</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="climate-challenge.html"><span class="material-symbols-outlined text-primary">emoji_events</span><span class="font-body-lg text-body-lg">Challenge</span></a>
 <a class="mt-8 text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-4 rounded-full" href="climate-challenge.html">JOIN THE CHALLENGE</a>
 </div>
@@ -143,67 +139,90 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 
 
 <main class="pt-24 md:pt-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
-<header class="text-center mb-12 max-w-3xl mx-auto">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Climate Time Machine</span>
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mt-2 mb-4">1980 to 2050.</h1>
-<p class="font-body-lg text-body-lg text-secondary">Drag past today and choose a path — Business as Usual, or Climate Action — to see how the next 25 years diverge.</p>
+<header class="mb-10 max-w-2xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Online Learning</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mt-2 mb-4">Take the walk further.</h1>
+<p class="font-body-lg text-body-lg text-secondary">Seven short lessons, one per zone. Tap any card to expand it.</p>
 </header>
-
-<!-- Scenario toggle -->
-<div class="flex justify-center mb-10">
-<div class="inline-flex bg-surface-container-low rounded-full p-1 border border-surface-variant">
-<button class="scenario-btn active px-6 py-3 rounded-full font-label-caps text-label-caps transition-colors" data-scenario="bau" type="button">BUSINESS AS USUAL</button>
-<button class="scenario-btn px-6 py-3 rounded-full font-label-caps text-label-caps transition-colors" data-scenario="action" type="button">CLIMATE ACTION</button>
+<div class="space-y-4 max-w-3xl">
+<details class="card rounded-2xl p-6 group">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-primary border border-primary/30 px-3 py-1 rounded-full">ZONE 01</span>
+<span class="material-symbols-outlined text-primary">info</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">What is an Eco Park, really?</h3>
 </div>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-secondary mt-4 pl-0 md:pl-[calc(theme(spacing.4)*2+96px)]">How the park's 7 zones connect to DENSO's group-wide sustainability goals, and what "net positive" means in practice.</p>
+</details>
+<details class="card rounded-2xl p-6 group">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-primary border border-primary/30 px-3 py-1 rounded-full">ZONE 02</span>
+<span class="material-symbols-outlined text-primary">autorenew</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">The circular economy, part by part</h3>
 </div>
-
-<section class="mb-section-gap relative">
-<div class="glass-panel rounded-3xl p-8 md:p-12">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-12">
-<div class="text-center p-6 border border-surface-variant rounded-xl bg-surface/50">
-<span class="block font-label-caps text-label-caps text-secondary mb-2">TEMPERATURE</span>
-<div class="font-data-tabular text-data-tabular text-headline-lg flex items-center justify-center gap-2">
-<span id="val-temp">+0.5°C</span>
-<span class="material-symbols-outlined text-primary text-[24px]">thermostat</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-secondary mt-4 pl-0 md:pl-[calc(theme(spacing.4)*2+96px)]">Why recovering a single motor or sensor matters, and how DENSO tracks material life cycles from factory to reuse.</p>
+</details>
+<details class="card rounded-2xl p-6 group">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-primary border border-primary/30 px-3 py-1 rounded-full">ZONE 03</span>
+<span class="material-symbols-outlined text-primary">factory</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">From sunlight to grid, from step to spark</h3>
 </div>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-secondary mt-4 pl-0 md:pl-[calc(theme(spacing.4)*2+96px)]">The physics behind the Energy Dojo's solar array and Pavegen tiles — no engineering degree required.</p>
+</details>
+<details class="card rounded-2xl p-6 group">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-primary border border-primary/30 px-3 py-1 rounded-full">ZONE 04</span>
+<span class="material-symbols-outlined text-primary">category</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Designing cleaner products</h3>
 </div>
-<div class="text-center p-6 border border-surface-variant rounded-xl bg-surface/50">
-<span class="block font-label-caps text-label-caps text-secondary mb-2">CO₂ EMISSIONS</span>
-<div class="font-data-tabular text-data-tabular text-headline-lg flex items-center justify-center gap-2">
-<span id="val-co2">350 ppm</span>
-<span class="material-symbols-outlined text-tertiary text-[24px]">cloud</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-secondary mt-4 pl-0 md:pl-[calc(theme(spacing.4)*2+96px)]">Material substitutions that cut embodied carbon without giving up durability or safety.</p>
+</details>
+<details class="card rounded-2xl p-6 group">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-primary border border-primary/30 px-3 py-1 rounded-full">ZONE 05</span>
+<span class="material-symbols-outlined text-primary">agriculture</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Climate-smart growing</h3>
 </div>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-secondary mt-4 pl-0 md:pl-[calc(theme(spacing.4)*2+96px)]">Composting, rainwater irrigation and low-input methods you can try in a balcony planter.</p>
+</details>
+<details class="card rounded-2xl p-6 group">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-primary border border-primary/30 px-3 py-1 rounded-full">ZONE 06</span>
+<span class="material-symbols-outlined text-primary">forest</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">How trees bank carbon</h3>
 </div>
-<div class="text-center p-6 border border-surface-variant rounded-xl bg-surface/50">
-<span class="block font-label-caps text-label-caps text-secondary mb-2">GREEN AREA</span>
-<div class="font-data-tabular text-data-tabular text-headline-lg flex items-center justify-center gap-2">
-<span id="val-green">85%</span>
-<span class="material-symbols-outlined text-secondary text-[24px]">park</span>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-secondary mt-4 pl-0 md:pl-[calc(theme(spacing.4)*2+96px)]">A plain-language look at carbon sinks, and why species selection changes how much CO2 gets stored.</p>
+</details>
+<details class="card rounded-2xl p-6 group">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-primary border border-primary/30 px-3 py-1 rounded-full">ZONE 07</span>
+<span class="material-symbols-outlined text-primary">water_drop</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Water, treated and reused</h3>
 </div>
+<span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-secondary mt-4 pl-0 md:pl-[calc(theme(spacing.4)*2+96px)]">The path from rooftop rainwater to fish nursery to irrigation — and why water quality still matters at every step.</p>
+</details>
 </div>
-</div>
-<div id="projected-note" class="hidden text-center mb-6"><span class="sim-tag">Simulation — projected, not measured</span></div>
-<div class="relative w-full h-24 flex flex-col justify-center">
-<div class="flex justify-between font-label-caps text-label-caps text-secondary mb-4 px-2">
-<span>1980</span><span>2026 · TODAY</span><span>2050</span>
-</div>
-<input class="w-full h-2 bg-surface-variant rounded-full outline-none slider-thumb appearance-none" id="timeSlider" max="2050" min="1980" type="range" value="1980">
-<div class="absolute top-1/2 left-[65.7%] w-px h-16 bg-on-surface/20 -translate-y-1/2 pointer-events-none"></div>
-<div class="absolute top-1/2 left-0 transform -translate-y-1/2 w-full flex justify-between px-4 pointer-events-none mt-6">
-<span class="font-data-tabular text-headline-md text-primary bg-surface px-4 py-1 rounded-full shadow-sm absolute transition-all duration-300" id="yearDisplay" style="left: 0%; transform: translateX(-50%);">1980</span>
-</div>
-</div>
-</div>
-</section>
-
-<section class="text-center py-section-gap flex flex-col items-center justify-center min-h-[40vh] border-t border-surface-variant">
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-4 uppercase">WE CANNOT CHANGE THE PAST.</h2>
-<h3 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary font-bold mb-12 uppercase leading-tight max-w-4xl mx-auto">BUT WE CAN CHOOSE 2050.</h3>
-<a class="bg-primary-container text-on-primary font-label-caps px-8 py-4 rounded-full text-lg hover:bg-primary transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 inline-flex items-center gap-3" href="zones.html">
-<span>SEE WHAT CHANGES THE OUTCOME</span>
-<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-</a>
-</section>
 </main>
 
 <!-- Site Footer (generated v2) -->
@@ -224,59 +243,5 @@ RE:IMAGINE — from learning to measurable impact. Data marked "Simulation" is i
 </div>
 </footer>
 
-<script>
-(function() {
-    var slider = document.getElementById('timeSlider');
-    var yearDisplay = document.getElementById('yearDisplay');
-    var valTemp = document.getElementById('val-temp');
-    var valCo2 = document.getElementById('val-co2');
-    var valGreen = document.getElementById('val-green');
-    var projectedNote = document.getElementById('projected-note');
-    var scenarioBtns = document.querySelectorAll('.scenario-btn');
-    var scenario = 'bau';
 
-    scenarioBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            scenarioBtns.forEach(function(b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            scenario = btn.getAttribute('data-scenario');
-            update();
-        });
-    });
-
-    function update() {
-        var year = parseInt(slider.value, 10);
-        var progressPast = Math.min((year - 1980) / (2026 - 1980), 1);
-        yearDisplay.textContent = year;
-        yearDisplay.style.left = (((year - 1980) / (2050 - 1980)) * 100) + '%';
-
-        var temp, co2, green;
-        if (year <= 2026) {
-            temp = (0.5 + (progressPast * 1.5));
-            co2 = 350 + (progressPast * 80);
-            green = 85 - (progressPast * 25);
-            projectedNote.classList.add('hidden');
-        } else {
-            var future = (year - 2026) / (2050 - 2026);
-            if (scenario === 'bau') {
-                temp = 2.0 + future * 2.1;
-                co2 = 430 + future * 90;
-                green = 60 - future * 30;
-            } else {
-                temp = 2.0 + future * 0.6;
-                co2 = 430 - future * 140;
-                green = 60 + future * 35;
-            }
-            projectedNote.classList.remove('hidden');
-        }
-
-        valTemp.textContent = '+' + temp.toFixed(1) + '°C';
-        valCo2.textContent = Math.round(co2) + ' ppm';
-        valGreen.textContent = Math.max(0, Math.round(green)) + '%';
-    }
-
-    slider.addEventListener('input', update);
-    update();
-})();
-</script>
 </body></html>

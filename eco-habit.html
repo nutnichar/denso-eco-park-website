@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Climate Time Machine — DENSO Eco Park</title>
-<meta name="description" content="Slide from 1980 to 2050 and choose Business as Usual or Climate Action to see how the next 25 years diverge.">
+<title>Eco Habit — DENSO Eco Park</title>
+<meta name="description" content="Simple at-home habits to check off after your Eco Park visit, saved locally on your device.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23AE0025'/%3E%3Cpath d='M32 12c11 6 16 14 16 22a16 16 0 1 1-32 0c0-8 5-16 16-22Z' fill='white'/%3E%3Ccircle cx='32' cy='38' r='6' fill='%23AE0025'/%3E%3C/svg%3E">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -67,11 +67,7 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 .source-tag a { color:#AE0025; text-decoration:underline; text-underline-offset:2px; }
 </style>
 
-<style>
-.slider-thumb::-webkit-slider-thumb { -webkit-appearance:none; appearance:none; width:32px; height:32px; border-radius:50%; background:#fff; cursor:pointer; box-shadow:0px 4px 10px rgba(0,0,0,.15); border:2px solid #e5e2e1; }
-.scenario-btn { color: #5f5e5e; }
-.scenario-btn.active { background:#AE0025; color:#fff; }
-</style>
+
 </head>
 <body class="antialiased overflow-x-hidden min-h-screen text-on-surface">
 <!-- Site Navigation (generated v2) -->
@@ -80,10 +76,10 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 <nav class="flex gap-4 lg:gap-5 items-center mx-4 overflow-x-auto">
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="impact.html">Impact</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="zones.html">7 Zones</a>
-<a class="text-primary font-bold border-b-2 border-primary transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="climate-time-machine.html">Time Machine</a>
+<a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="climate-time-machine.html">Time Machine</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="live-dashboard.html">Live Dashboard</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="my-impact.html">My Impact</a>
-<a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="eco-habit.html">Eco Habit</a>
+<a class="text-primary font-bold border-b-2 border-primary transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="eco-habit.html">Eco Habit</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="online-learning.html">Learning</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="climate-challenge.html">Challenge</a>
 </nav>
@@ -93,10 +89,10 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 <nav class="flex flex-col gap-5">
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="impact.html" title="Impact"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">thermostat</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Impact</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="zones.html" title="7 Zones"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">grid_view</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">7 Zones</span></a>
-<a class="flex flex-col items-center gap-1 text-primary border-r-4 border-primary pr-3 scale-95" href="climate-time-machine.html" title="Time Machine"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span><span class="font-label-caps text-[9px] tracking-wide font-bold text-center leading-tight">Time Machine</span></a>
+<a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="climate-time-machine.html" title="Time Machine"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">visibility</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Time Machine</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="live-dashboard.html" title="Live Dashboard"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">analytics</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Live Dashboard</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="my-impact.html" title="My Impact"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">badge</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">My Impact</span></a>
-<a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="eco-habit.html" title="Eco Habit"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">task_alt</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Eco Habit</span></a>
+<a class="flex flex-col items-center gap-1 text-primary border-r-4 border-primary pr-3 scale-95" href="eco-habit.html" title="Eco Habit"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">task_alt</span><span class="font-label-caps text-[9px] tracking-wide font-bold text-center leading-tight">Eco Habit</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="online-learning.html" title="Learning"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">school</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Learning</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="climate-challenge.html" title="Challenge"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">emoji_events</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Challenge</span></a>
 </nav>
@@ -120,10 +116,10 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 </a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="impact.html"><span class="material-symbols-outlined text-primary">thermostat</span><span class="font-body-lg text-body-lg">Impact</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="zones.html"><span class="material-symbols-outlined text-primary">grid_view</span><span class="font-body-lg text-body-lg">7 Zones</span></a>
-<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-primary font-bold" href="climate-time-machine.html"><span class="material-symbols-outlined text-primary">visibility</span><span class="font-body-lg text-body-lg">Time Machine</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="climate-time-machine.html"><span class="material-symbols-outlined text-primary">visibility</span><span class="font-body-lg text-body-lg">Time Machine</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="live-dashboard.html"><span class="material-symbols-outlined text-primary">analytics</span><span class="font-body-lg text-body-lg">Live Dashboard</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="my-impact.html"><span class="material-symbols-outlined text-primary">badge</span><span class="font-body-lg text-body-lg">My Impact</span></a>
-<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="eco-habit.html"><span class="material-symbols-outlined text-primary">task_alt</span><span class="font-body-lg text-body-lg">Eco Habit</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-primary font-bold" href="eco-habit.html"><span class="material-symbols-outlined text-primary">task_alt</span><span class="font-body-lg text-body-lg">Eco Habit</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="online-learning.html"><span class="material-symbols-outlined text-primary">school</span><span class="font-body-lg text-body-lg">Learning</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="climate-challenge.html"><span class="material-symbols-outlined text-primary">emoji_events</span><span class="font-body-lg text-body-lg">Challenge</span></a>
 <a class="mt-8 text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-4 rounded-full" href="climate-challenge.html">JOIN THE CHALLENGE</a>
@@ -143,67 +139,65 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 
 
 <main class="pt-24 md:pt-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
-<header class="text-center mb-12 max-w-3xl mx-auto">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Climate Time Machine</span>
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mt-2 mb-4">1980 to 2050.</h1>
-<p class="font-body-lg text-body-lg text-secondary">Drag past today and choose a path — Business as Usual, or Climate Action — to see how the next 25 years diverge.</p>
+<header class="mb-10 max-w-2xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Eco Habit</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mt-2 mb-4">Take it home with you.</h1>
+<p class="font-body-lg text-body-lg text-secondary">Small habits, checked off. Your progress is saved on this device only — nothing is sent anywhere.</p>
 </header>
 
-<!-- Scenario toggle -->
-<div class="flex justify-center mb-10">
-<div class="inline-flex bg-surface-container-low rounded-full p-1 border border-surface-variant">
-<button class="scenario-btn active px-6 py-3 rounded-full font-label-caps text-label-caps transition-colors" data-scenario="bau" type="button">BUSINESS AS USUAL</button>
-<button class="scenario-btn px-6 py-3 rounded-full font-label-caps text-label-caps transition-colors" data-scenario="action" type="button">CLIMATE ACTION</button>
+<div class="card rounded-2xl p-6 md:p-8 max-w-2xl">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Your progress</span>
+<span class="font-data-tabular text-headline-md text-primary" id="habit-count">0 / 8</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden mb-6">
+<div class="h-full bg-primary rounded-full transition-all duration-500" id="habit-bar" style="width:0%"></div>
+</div>
+<div id="habit-list">
+<label class="flex items-center gap-4 py-4 border-b border-surface-variant cursor-pointer group">
+<input class="habit-check w-5 h-5 accent-primary shrink-0" data-idx="0" type="checkbox">
+<span class="material-symbols-outlined text-primary">bolt</span>
+<span class="font-body-lg text-body-lg text-on-surface group-has-[:checked]:line-through group-has-[:checked]:text-secondary">Switch one more room to LED lighting</span>
+</label>
+<label class="flex items-center gap-4 py-4 border-b border-surface-variant cursor-pointer group">
+<input class="habit-check w-5 h-5 accent-primary shrink-0" data-idx="1" type="checkbox">
+<span class="material-symbols-outlined text-primary">water_drop</span>
+<span class="font-body-lg text-body-lg text-on-surface group-has-[:checked]:line-through group-has-[:checked]:text-secondary">Collect rinse water for houseplants</span>
+</label>
+<label class="flex items-center gap-4 py-4 border-b border-surface-variant cursor-pointer group">
+<input class="habit-check w-5 h-5 accent-primary shrink-0" data-idx="2" type="checkbox">
+<span class="material-symbols-outlined text-primary">recycling</span>
+<span class="font-body-lg text-body-lg text-on-surface group-has-[:checked]:line-through group-has-[:checked]:text-secondary">Sort e-waste separately before disposal</span>
+</label>
+<label class="flex items-center gap-4 py-4 border-b border-surface-variant cursor-pointer group">
+<input class="habit-check w-5 h-5 accent-primary shrink-0" data-idx="3" type="checkbox">
+<span class="material-symbols-outlined text-primary">directions_walk</span>
+<span class="font-body-lg text-body-lg text-on-surface group-has-[:checked]:line-through group-has-[:checked]:text-secondary">Walk or cycle one short trip instead of driving</span>
+</label>
+<label class="flex items-center gap-4 py-4 border-b border-surface-variant cursor-pointer group">
+<input class="habit-check w-5 h-5 accent-primary shrink-0" data-idx="4" type="checkbox">
+<span class="material-symbols-outlined text-primary">compost</span>
+<span class="font-body-lg text-body-lg text-on-surface group-has-[:checked]:line-through group-has-[:checked]:text-secondary">Start a small kitchen compost bin</span>
+</label>
+<label class="flex items-center gap-4 py-4 border-b border-surface-variant cursor-pointer group">
+<input class="habit-check w-5 h-5 accent-primary shrink-0" data-idx="5" type="checkbox">
+<span class="material-symbols-outlined text-primary">eco</span>
+<span class="font-body-lg text-body-lg text-on-surface group-has-[:checked]:line-through group-has-[:checked]:text-secondary">Choose one reusable item over single-use this week</span>
+</label>
+<label class="flex items-center gap-4 py-4 border-b border-surface-variant cursor-pointer group">
+<input class="habit-check w-5 h-5 accent-primary shrink-0" data-idx="6" type="checkbox">
+<span class="material-symbols-outlined text-primary">thermostat</span>
+<span class="font-body-lg text-body-lg text-on-surface group-has-[:checked]:line-through group-has-[:checked]:text-secondary">Set your AC one degree warmer</span>
+</label>
+<label class="flex items-center gap-4 py-4 border-b border-surface-variant cursor-pointer group">
+<input class="habit-check w-5 h-5 accent-primary shrink-0" data-idx="7" type="checkbox">
+<span class="material-symbols-outlined text-primary">shopping_bag</span>
+<span class="font-body-lg text-body-lg text-on-surface group-has-[:checked]:line-through group-has-[:checked]:text-secondary">Bring your own bag on your next shop</span>
+</label>
 </div>
 </div>
 
-<section class="mb-section-gap relative">
-<div class="glass-panel rounded-3xl p-8 md:p-12">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-12">
-<div class="text-center p-6 border border-surface-variant rounded-xl bg-surface/50">
-<span class="block font-label-caps text-label-caps text-secondary mb-2">TEMPERATURE</span>
-<div class="font-data-tabular text-data-tabular text-headline-lg flex items-center justify-center gap-2">
-<span id="val-temp">+0.5°C</span>
-<span class="material-symbols-outlined text-primary text-[24px]">thermostat</span>
-</div>
-</div>
-<div class="text-center p-6 border border-surface-variant rounded-xl bg-surface/50">
-<span class="block font-label-caps text-label-caps text-secondary mb-2">CO₂ EMISSIONS</span>
-<div class="font-data-tabular text-data-tabular text-headline-lg flex items-center justify-center gap-2">
-<span id="val-co2">350 ppm</span>
-<span class="material-symbols-outlined text-tertiary text-[24px]">cloud</span>
-</div>
-</div>
-<div class="text-center p-6 border border-surface-variant rounded-xl bg-surface/50">
-<span class="block font-label-caps text-label-caps text-secondary mb-2">GREEN AREA</span>
-<div class="font-data-tabular text-data-tabular text-headline-lg flex items-center justify-center gap-2">
-<span id="val-green">85%</span>
-<span class="material-symbols-outlined text-secondary text-[24px]">park</span>
-</div>
-</div>
-</div>
-<div id="projected-note" class="hidden text-center mb-6"><span class="sim-tag">Simulation — projected, not measured</span></div>
-<div class="relative w-full h-24 flex flex-col justify-center">
-<div class="flex justify-between font-label-caps text-label-caps text-secondary mb-4 px-2">
-<span>1980</span><span>2026 · TODAY</span><span>2050</span>
-</div>
-<input class="w-full h-2 bg-surface-variant rounded-full outline-none slider-thumb appearance-none" id="timeSlider" max="2050" min="1980" type="range" value="1980">
-<div class="absolute top-1/2 left-[65.7%] w-px h-16 bg-on-surface/20 -translate-y-1/2 pointer-events-none"></div>
-<div class="absolute top-1/2 left-0 transform -translate-y-1/2 w-full flex justify-between px-4 pointer-events-none mt-6">
-<span class="font-data-tabular text-headline-md text-primary bg-surface px-4 py-1 rounded-full shadow-sm absolute transition-all duration-300" id="yearDisplay" style="left: 0%; transform: translateX(-50%);">1980</span>
-</div>
-</div>
-</div>
-</section>
-
-<section class="text-center py-section-gap flex flex-col items-center justify-center min-h-[40vh] border-t border-surface-variant">
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-4 uppercase">WE CANNOT CHANGE THE PAST.</h2>
-<h3 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary font-bold mb-12 uppercase leading-tight max-w-4xl mx-auto">BUT WE CAN CHOOSE 2050.</h3>
-<a class="bg-primary-container text-on-primary font-label-caps px-8 py-4 rounded-full text-lg hover:bg-primary transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 inline-flex items-center gap-3" href="zones.html">
-<span>SEE WHAT CHANGES THE OUTCOME</span>
-<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-</a>
-</section>
+<p class="font-label-caps text-label-caps text-secondary mt-6 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">smartphone</span> Saved on this device only (browser local storage)</p>
 </main>
 
 <!-- Site Footer (generated v2) -->
@@ -226,57 +220,38 @@ RE:IMAGINE — from learning to measurable impact. Data marked "Simulation" is i
 
 <script>
 (function() {
-    var slider = document.getElementById('timeSlider');
-    var yearDisplay = document.getElementById('yearDisplay');
-    var valTemp = document.getElementById('val-temp');
-    var valCo2 = document.getElementById('val-co2');
-    var valGreen = document.getElementById('val-green');
-    var projectedNote = document.getElementById('projected-note');
-    var scenarioBtns = document.querySelectorAll('.scenario-btn');
-    var scenario = 'bau';
+    var KEY = 'denso-eco-habit-v1';
+    var boxes = document.querySelectorAll('.habit-check');
+    var countEl = document.getElementById('habit-count');
+    var barEl = document.getElementById('habit-bar');
+    var total = boxes.length;
 
-    scenarioBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            scenarioBtns.forEach(function(b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            scenario = btn.getAttribute('data-scenario');
-            update();
+    function load() {
+        try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { return {}; }
+    }
+    function save(state) {
+        try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    }
+    function refresh() {
+        var state = load();
+        var done = 0;
+        boxes.forEach(function(b) {
+            var checked = !!state[b.getAttribute('data-idx')];
+            b.checked = checked;
+            if (checked) done++;
+        });
+        countEl.textContent = done + ' / ' + total;
+        barEl.style.width = (total ? (done / total * 100) : 0) + '%';
+    }
+    boxes.forEach(function(b) {
+        b.addEventListener('change', function() {
+            var state = load();
+            state[b.getAttribute('data-idx')] = b.checked;
+            save(state);
+            refresh();
         });
     });
-
-    function update() {
-        var year = parseInt(slider.value, 10);
-        var progressPast = Math.min((year - 1980) / (2026 - 1980), 1);
-        yearDisplay.textContent = year;
-        yearDisplay.style.left = (((year - 1980) / (2050 - 1980)) * 100) + '%';
-
-        var temp, co2, green;
-        if (year <= 2026) {
-            temp = (0.5 + (progressPast * 1.5));
-            co2 = 350 + (progressPast * 80);
-            green = 85 - (progressPast * 25);
-            projectedNote.classList.add('hidden');
-        } else {
-            var future = (year - 2026) / (2050 - 2026);
-            if (scenario === 'bau') {
-                temp = 2.0 + future * 2.1;
-                co2 = 430 + future * 90;
-                green = 60 - future * 30;
-            } else {
-                temp = 2.0 + future * 0.6;
-                co2 = 430 - future * 140;
-                green = 60 + future * 35;
-            }
-            projectedNote.classList.remove('hidden');
-        }
-
-        valTemp.textContent = '+' + temp.toFixed(1) + '°C';
-        valCo2.textContent = Math.round(co2) + ' ppm';
-        valGreen.textContent = Math.max(0, Math.round(green)) + '%';
-    }
-
-    slider.addEventListener('input', update);
-    update();
+    refresh();
 })();
 </script>
 </body></html>

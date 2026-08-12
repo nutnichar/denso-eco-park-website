@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Climate Time Machine — DENSO Eco Park</title>
-<meta name="description" content="Slide from 1980 to 2050 and choose Business as Usual or Climate Action to see how the next 25 years diverge.">
+<title>Impact — DENSO Eco Park</title>
+<meta name="description" content="Cited climate data: 2024 was the warmest year on record at 1.55°C above pre-industrial levels, with Thailand facing record heatwaves, floods and drought.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23AE0025'/%3E%3Cpath d='M32 12c11 6 16 14 16 22a16 16 0 1 1-32 0c0-8 5-16 16-22Z' fill='white'/%3E%3Ccircle cx='32' cy='38' r='6' fill='%23AE0025'/%3E%3C/svg%3E">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -67,20 +67,16 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 .source-tag a { color:#AE0025; text-decoration:underline; text-underline-offset:2px; }
 </style>
 
-<style>
-.slider-thumb::-webkit-slider-thumb { -webkit-appearance:none; appearance:none; width:32px; height:32px; border-radius:50%; background:#fff; cursor:pointer; box-shadow:0px 4px 10px rgba(0,0,0,.15); border:2px solid #e5e2e1; }
-.scenario-btn { color: #5f5e5e; }
-.scenario-btn.active { background:#AE0025; color:#fff; }
-</style>
+
 </head>
 <body class="antialiased overflow-x-hidden min-h-screen text-on-surface">
 <!-- Site Navigation (generated v2) -->
 <header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-sm hidden md:flex justify-between items-center px-margin-desktop py-3 max-w-container-max mx-auto left-0 right-0">
 <a class="font-display-lg text-headline-md tracking-tighter text-on-surface shrink-0" href="index.html">RE:IMAGINE</a>
 <nav class="flex gap-4 lg:gap-5 items-center mx-4 overflow-x-auto">
-<a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="impact.html">Impact</a>
+<a class="text-primary font-bold border-b-2 border-primary transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="impact.html">Impact</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="zones.html">7 Zones</a>
-<a class="text-primary font-bold border-b-2 border-primary transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="climate-time-machine.html">Time Machine</a>
+<a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="climate-time-machine.html">Time Machine</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="live-dashboard.html">Live Dashboard</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="my-impact.html">My Impact</a>
 <a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="eco-habit.html">Eco Habit</a>
@@ -91,9 +87,9 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 </header>
 <aside class="fixed left-0 top-1/2 -translate-y-1/2 h-auto py-6 rounded-r-lg bg-transparent z-40 hidden md:flex flex-col gap-5 w-20">
 <nav class="flex flex-col gap-5">
-<a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="impact.html" title="Impact"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">thermostat</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Impact</span></a>
+<a class="flex flex-col items-center gap-1 text-primary border-r-4 border-primary pr-3 scale-95" href="impact.html" title="Impact"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">thermostat</span><span class="font-label-caps text-[9px] tracking-wide font-bold text-center leading-tight">Impact</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="zones.html" title="7 Zones"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">grid_view</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">7 Zones</span></a>
-<a class="flex flex-col items-center gap-1 text-primary border-r-4 border-primary pr-3 scale-95" href="climate-time-machine.html" title="Time Machine"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">visibility</span><span class="font-label-caps text-[9px] tracking-wide font-bold text-center leading-tight">Time Machine</span></a>
+<a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="climate-time-machine.html" title="Time Machine"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">visibility</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Time Machine</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="live-dashboard.html" title="Live Dashboard"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">analytics</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Live Dashboard</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="my-impact.html" title="My Impact"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">badge</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">My Impact</span></a>
 <a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="eco-habit.html" title="Eco Habit"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">task_alt</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Eco Habit</span></a>
@@ -118,9 +114,9 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 <span class="material-symbols-outlined text-primary">home</span>
 <span class="font-body-lg text-body-lg">Home</span>
 </a>
-<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="impact.html"><span class="material-symbols-outlined text-primary">thermostat</span><span class="font-body-lg text-body-lg">Impact</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-primary font-bold" href="impact.html"><span class="material-symbols-outlined text-primary">thermostat</span><span class="font-body-lg text-body-lg">Impact</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="zones.html"><span class="material-symbols-outlined text-primary">grid_view</span><span class="font-body-lg text-body-lg">7 Zones</span></a>
-<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-primary font-bold" href="climate-time-machine.html"><span class="material-symbols-outlined text-primary">visibility</span><span class="font-body-lg text-body-lg">Time Machine</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="climate-time-machine.html"><span class="material-symbols-outlined text-primary">visibility</span><span class="font-body-lg text-body-lg">Time Machine</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="live-dashboard.html"><span class="material-symbols-outlined text-primary">analytics</span><span class="font-body-lg text-body-lg">Live Dashboard</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="my-impact.html"><span class="material-symbols-outlined text-primary">badge</span><span class="font-body-lg text-body-lg">My Impact</span></a>
 <a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="eco-habit.html"><span class="material-symbols-outlined text-primary">task_alt</span><span class="font-body-lg text-body-lg">Eco Habit</span></a>
@@ -142,67 +138,91 @@ body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
 </script>
 
 
-<main class="pt-24 md:pt-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
-<header class="text-center mb-12 max-w-3xl mx-auto">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Climate Time Machine</span>
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mt-2 mb-4">1980 to 2050.</h1>
-<p class="font-body-lg text-body-lg text-secondary">Drag past today and choose a path — Business as Usual, or Climate Action — to see how the next 25 years diverge.</p>
-</header>
+<main class="pt-24 md:pt-28">
+<!-- Core challenge intro (kept from DENSO's own narrative) -->
+<section class="relative min-h-[60vh] flex flex-col justify-center items-center text-center overflow-hidden mb-section-gap">
+<div class="absolute inset-0 bg-gradient-to-br from-[#141414] via-[#241010] to-[#3a0a10]"></div>
+<div class="relative z-10 space-y-6 max-w-3xl px-4 py-20">
+<p class="font-label-caps text-label-caps text-white/70 tracking-widest">THE CORE CHALLENGE</p>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white">KNOWLEDGE STARTS<br>THE JOURNEY.</h1>
+<div class="h-px w-full max-w-md mx-auto my-8 bg-white/30"></div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white">ACTION CREATES <span class="text-primary-fixed-dim">THE IMPACT.</span></h1>
+</div>
+</section>
 
-<!-- Scenario toggle -->
-<div class="flex justify-center mb-10">
-<div class="inline-flex bg-surface-container-low rounded-full p-1 border border-surface-variant">
-<button class="scenario-btn active px-6 py-3 rounded-full font-label-caps text-label-caps transition-colors" data-scenario="bau" type="button">BUSINESS AS USUAL</button>
-<button class="scenario-btn px-6 py-3 rounded-full font-label-caps text-label-caps transition-colors" data-scenario="action" type="button">CLIMATE ACTION</button>
+<!-- The climate reality -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="mb-10 max-w-2xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">The Climate Reality</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">The numbers behind why the Eco Park exists.</h2>
+<p class="font-body-md text-body-md text-secondary mt-4">Every figure below is cited. Where DENSO-specific data isn't yet measured on this site, it's clearly marked "Simulation" instead of presented as fact.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="card rounded-2xl p-8">
+<span class="material-symbols-outlined text-primary text-[32px] mb-4 block">device_thermostat</span>
+<div class="font-data-tabular text-headline-lg text-primary mb-2">1.55°C ± 0.13°C</div>
+<h3 class="font-headline-md text-headline-md mb-2">2024: the warmest year on record</h3>
+<p class="font-body-md text-body-md text-secondary mb-4">Global average surface temperature was about 1.55°C above the 1850–1900 pre-industrial baseline — the first year to be confirmed above the 1.5°C threshold.</p>
+<div class="source-tag">Source: <a href="#sources">WMO, Jan 2025</a></div>
+</div>
+<div class="card rounded-2xl p-8">
+<span class="material-symbols-outlined text-primary text-[32px] mb-4 block">local_fire_department</span>
+<div class="font-data-tabular text-headline-lg text-primary mb-2">26 provinces &gt; 40°C</div>
+<h3 class="font-headline-md text-headline-md mb-2">Thailand's record 2024 heatwave</h3>
+<p class="font-body-md text-body-md text-secondary mb-4">In April–May 2024, dozens of districts across Thailand's 77 provinces broke temperature records, with 26 provinces exceeding 40°C.</p>
+<div class="source-tag">Source: <a href="#sources">UNICEF Thailand</a></div>
+</div>
+<div class="card rounded-2xl p-8">
+<span class="material-symbols-outlined text-primary text-[32px] mb-4 block">flood</span>
+<div class="font-data-tabular text-headline-lg text-primary mb-2">30,000+ families</div>
+<h3 class="font-headline-md text-headline-md mb-2">Northern floods, same year</h3>
+<p class="font-body-md text-body-md text-secondary mb-4">From August 2024, remnants of Typhoon Yagi triggered severe flooding across 12 northern provinces — alongside a drought that hit off-season rice, sugarcane and cassava elsewhere.</p>
+<div class="source-tag">Sources: <a href="#sources">ThaiCyclopedia, Krungsri Research</a></div>
 </div>
 </div>
+</section>
 
-<section class="mb-section-gap relative">
-<div class="glass-panel rounded-3xl p-8 md:p-12">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-12">
-<div class="text-center p-6 border border-surface-variant rounded-xl bg-surface/50">
-<span class="block font-label-caps text-label-caps text-secondary mb-2">TEMPERATURE</span>
-<div class="font-data-tabular text-data-tabular text-headline-lg flex items-center justify-center gap-2">
-<span id="val-temp">+0.5°C</span>
-<span class="material-symbols-outlined text-primary text-[24px]">thermostat</span>
+<!-- DENSO Group's response -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="card rounded-2xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">DENSO Group's Response</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2 mb-4">Industrial precision, applied to sustainability.</h2>
+<p class="font-body-md text-body-md text-secondary">DENSO Group reports a 99.96% resource recycling rate across its operations, alongside published water intake, wastewater and water-quality figures (pH, COD, BOD, SS, oil content) in its group Sustainability Report. These are group-level figures, not specific to this park site — site-level metrics are being instrumented and will replace the "Simulation" labels on the Live Dashboard as real sensor data comes online.</p>
 </div>
+<div class="grid grid-cols-2 gap-6">
+<div class="text-center p-6 rounded-xl bg-surface-container-low">
+<div class="font-data-tabular text-headline-lg text-primary">99.96%</div>
+<div class="font-label-caps text-label-caps text-secondary mt-1">Resource recycling rate</div>
 </div>
-<div class="text-center p-6 border border-surface-variant rounded-xl bg-surface/50">
-<span class="block font-label-caps text-label-caps text-secondary mb-2">CO₂ EMISSIONS</span>
-<div class="font-data-tabular text-data-tabular text-headline-lg flex items-center justify-center gap-2">
-<span id="val-co2">350 ppm</span>
-<span class="material-symbols-outlined text-tertiary text-[24px]">cloud</span>
-</div>
-</div>
-<div class="text-center p-6 border border-surface-variant rounded-xl bg-surface/50">
-<span class="block font-label-caps text-label-caps text-secondary mb-2">GREEN AREA</span>
-<div class="font-data-tabular text-data-tabular text-headline-lg flex items-center justify-center gap-2">
-<span id="val-green">85%</span>
-<span class="material-symbols-outlined text-secondary text-[24px]">park</span>
-</div>
-</div>
-</div>
-<div id="projected-note" class="hidden text-center mb-6"><span class="sim-tag">Simulation — projected, not measured</span></div>
-<div class="relative w-full h-24 flex flex-col justify-center">
-<div class="flex justify-between font-label-caps text-label-caps text-secondary mb-4 px-2">
-<span>1980</span><span>2026 · TODAY</span><span>2050</span>
-</div>
-<input class="w-full h-2 bg-surface-variant rounded-full outline-none slider-thumb appearance-none" id="timeSlider" max="2050" min="1980" type="range" value="1980">
-<div class="absolute top-1/2 left-[65.7%] w-px h-16 bg-on-surface/20 -translate-y-1/2 pointer-events-none"></div>
-<div class="absolute top-1/2 left-0 transform -translate-y-1/2 w-full flex justify-between px-4 pointer-events-none mt-6">
-<span class="font-data-tabular text-headline-md text-primary bg-surface px-4 py-1 rounded-full shadow-sm absolute transition-all duration-300" id="yearDisplay" style="left: 0%; transform: translateX(-50%);">1980</span>
+<div class="text-center p-6 rounded-xl bg-surface-container-low">
+<span class="sim-tag mb-2">Simulation</span>
+<div class="font-data-tabular text-headline-lg text-on-surface">—</div>
+<div class="font-label-caps text-label-caps text-secondary mt-1">Site-level water reuse (pending sensors)</div>
 </div>
 </div>
 </div>
 </section>
 
-<section class="text-center py-section-gap flex flex-col items-center justify-center min-h-[40vh] border-t border-surface-variant">
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary mb-4 uppercase">WE CANNOT CHANGE THE PAST.</h2>
-<h3 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary font-bold mb-12 uppercase leading-tight max-w-4xl mx-auto">BUT WE CAN CHOOSE 2050.</h3>
-<a class="bg-primary-container text-on-primary font-label-caps px-8 py-4 rounded-full text-lg hover:bg-primary transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 inline-flex items-center gap-3" href="zones.html">
-<span>SEE WHAT CHANGES THE OUTCOME</span>
-<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-</a>
+<!-- CTA -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">See how the Eco Park responds, zone by zone.</h2>
+<a class="inline-block bg-primary text-on-primary font-headline-md text-headline-md px-8 py-4 rounded-full hover:bg-primary-container transition-colors" href="zones.html">EXPLORE THE 7 ZONES</a>
+</section>
+
+<!-- Sources -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap" id="sources">
+<div class="border-t border-surface-variant pt-8">
+<h3 class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-4">Sources &amp; Citations</h3>
+<ul class="font-body-md text-body-md text-secondary space-y-2 list-disc pl-5">
+<li>World Meteorological Organization — <a class="text-primary hover:underline" href="https://wmo.int/news/media-centre/wmo-confirms-2024-warmest-year-record-about-155degc-above-pre-industrial-level" target="_blank" rel="noopener">"WMO confirms 2024 as warmest year on record at about 1.55°C above pre-industrial level"</a>, January 2025.</li>
+<li>Copernicus Climate Change Service — <a class="text-primary hover:underline" href="https://climate.copernicus.eu/copernicus-2024-first-year-exceed-15degc-above-pre-industrial-level" target="_blank" rel="noopener">"2024 is the first year to exceed 1.5°C above pre-industrial level"</a>.</li>
+<li>UNICEF Thailand — <a class="text-primary hover:underline" href="https://www.unicef.org/thailand/press-releases/over-10-million-children-affected-high-heat-thailand-unicef" target="_blank" rel="noopener">"Over 10 million children affected by high heat in Thailand"</a>.</li>
+<li>ThaiCyclopedia — <a class="text-primary hover:underline" href="https://thaicyclopedia.com/thailand-floods-2024-the-environmental-impact-and-climate-crisis/" target="_blank" rel="noopener">"Thai Floods 2024: The Environmental Impact and Climate Crisis"</a>.</li>
+<li>Krungsri Research — <a class="text-primary hover:underline" href="https://www.krungsri.com/en/research/research-intelligence/drought-2024" target="_blank" rel="noopener">"Drought and Flood Risk 2024: Impacts on agriculture and related industries"</a>.</li>
+<li>DENSO Group Sustainability Report — resource recycling rate and water quality figures as published by DENSO Corporation (group-level; not site-specific to this park).</li>
+</ul>
+</div>
 </section>
 </main>
 
@@ -224,59 +244,5 @@ RE:IMAGINE — from learning to measurable impact. Data marked "Simulation" is i
 </div>
 </footer>
 
-<script>
-(function() {
-    var slider = document.getElementById('timeSlider');
-    var yearDisplay = document.getElementById('yearDisplay');
-    var valTemp = document.getElementById('val-temp');
-    var valCo2 = document.getElementById('val-co2');
-    var valGreen = document.getElementById('val-green');
-    var projectedNote = document.getElementById('projected-note');
-    var scenarioBtns = document.querySelectorAll('.scenario-btn');
-    var scenario = 'bau';
 
-    scenarioBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            scenarioBtns.forEach(function(b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            scenario = btn.getAttribute('data-scenario');
-            update();
-        });
-    });
-
-    function update() {
-        var year = parseInt(slider.value, 10);
-        var progressPast = Math.min((year - 1980) / (2026 - 1980), 1);
-        yearDisplay.textContent = year;
-        yearDisplay.style.left = (((year - 1980) / (2050 - 1980)) * 100) + '%';
-
-        var temp, co2, green;
-        if (year <= 2026) {
-            temp = (0.5 + (progressPast * 1.5));
-            co2 = 350 + (progressPast * 80);
-            green = 85 - (progressPast * 25);
-            projectedNote.classList.add('hidden');
-        } else {
-            var future = (year - 2026) / (2050 - 2026);
-            if (scenario === 'bau') {
-                temp = 2.0 + future * 2.1;
-                co2 = 430 + future * 90;
-                green = 60 - future * 30;
-            } else {
-                temp = 2.0 + future * 0.6;
-                co2 = 430 - future * 140;
-                green = 60 + future * 35;
-            }
-            projectedNote.classList.remove('hidden');
-        }
-
-        valTemp.textContent = '+' + temp.toFixed(1) + '°C';
-        valCo2.textContent = Math.round(co2) + ' ppm';
-        valGreen.textContent = Math.max(0, Math.round(green)) + '%';
-    }
-
-    slider.addEventListener('input', update);
-    update();
-})();
-</script>
 </body></html>
