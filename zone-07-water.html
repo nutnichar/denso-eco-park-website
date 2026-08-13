@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Zone 07: Water & Nature — DENSO Eco Park</title>
+<meta name="description" content="A real photogrammetry 3D scan of the Eco Park's rainwater pond, aeration system and fish nursery — rotate and explore.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23AE0025'/%3E%3Cpath d='M32 12c11 6 16 14 16 22a16 16 0 1 1-32 0c0-8 5-16 16-22Z' fill='white'/%3E%3Ccircle cx='32' cy='38' r='6' fill='%23AE0025'/%3E%3C/svg%3E">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "surface-container-high": "#e8e8e6", "primary-container": "#dc0032",
+                "primary-fixed-dim": "#ffb3b1", "secondary-fixed-dim": "#c8c6c5",
+                "error-container": "#ffdad6", "inverse-surface": "#2f3130",
+                "on-background": "#1a1c1b", "outline": "#926e6d",
+                "surface-container-lowest": "#ffffff", "on-primary": "#ffffff",
+                "surface-dim": "#dadad8", "surface-bright": "#f9f9f7",
+                "tertiary": "#545656", "inverse-on-surface": "#f1f1ef",
+                "secondary-fixed": "#e5e2e1", "error": "#ba1a1a",
+                "outline-variant": "#e7bcbb", "surface-container-low": "#f4f4f2",
+                "background": "#f9f9f7", "secondary": "#5f5e5e",
+                "on-tertiary": "#ffffff", "on-secondary": "#ffffff",
+                "surface": "#f9f9f7", "surface-container-highest": "#e2e3e1",
+                "surface-container": "#eeeeec", "on-secondary-container": "#656464",
+                "surface-tint": "#bf002a", "surface-variant": "#e2e3e1",
+                "primary": "#ae0025", "secondary-container": "#e5e2e1",
+                "on-surface": "#1a1c1b", "tertiary-container": "#6c6e6e",
+                "tertiary-fixed": "#e2e2e2", "on-surface-variant": "#5d3f3e",
+                "success": "#2e7d32", "success-container": "#e8f5e9"
+            },
+            borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" },
+            spacing: { unit: "8px", "section-gap": "120px", "margin-mobile": "20px", "container-max": "1280px", gutter: "24px", "margin-desktop": "64px" },
+            fontFamily: {
+                "display-lg-mobile": ["IBM Plex Sans"], "display-lg": ["IBM Plex Sans"],
+                "body-md": ["IBM Plex Sans"], "headline-md": ["IBM Plex Sans"],
+                "data-tabular": ["IBM Plex Sans"], "body-lg": ["IBM Plex Sans"],
+                "label-caps": ["IBM Plex Sans"], "headline-lg": ["IBM Plex Sans"]
+            },
+            fontSize: {
+                "display-lg-mobile": ["36px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "700" }],
+                "display-lg": ["56px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                "headline-md": ["22px", { lineHeight: "1.4", fontWeight: "600" }],
+                "data-tabular": ["20px", { lineHeight: "1.0", fontWeight: "500" }],
+                "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                "label-caps": ["11px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "600" }],
+                "headline-lg": ["30px", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }]
+            }
+        }
+    }
+}
+</script>
+
+<style>
+body { background-color: #F7F7F5; font-feature-settings: "tnum"; }
+.glass-panel { background: rgba(255,255,255,0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid #E5E5E0; box-shadow: 0px 10px 30px rgba(0,0,0,0.04); }
+.card { background: #fff; border: 1px solid #E5E5E0; box-shadow: 0px 10px 30px rgba(0,0,0,0.04); transition: transform .25s ease, box-shadow .25s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0px 15px 34px rgba(0,0,0,0.08); }
+.sim-tag { display:inline-flex; align-items:center; gap:4px; background:#FFF1E0; color:#8A5A00; font-size:10px; font-weight:700; letter-spacing:.08em; padding:2px 8px; border-radius:9999px; text-transform:uppercase; }
+.source-tag { font-size:12px; color:#926e6d; }
+.source-tag a { color:#AE0025; text-decoration:underline; text-underline-offset:2px; }
+</style>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<style>
+model-viewer { --poster-color: transparent; --progress-bar-color: #AE0025; }
+</style>
+</head>
+<body class="antialiased overflow-x-hidden min-h-screen text-on-surface">
+<!-- Site Navigation (generated v2) -->
+<header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-sm hidden md:flex justify-between items-center px-margin-desktop py-3 max-w-container-max mx-auto left-0 right-0">
+<a class="font-display-lg text-headline-md tracking-tighter text-on-surface shrink-0" href="index.html">RE:IMAGINE</a>
+<nav class="flex gap-4 lg:gap-5 items-center mx-4 overflow-x-auto">
+<a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="impact.html">Impact</a>
+<a class="text-primary font-bold border-b-2 border-primary transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="zones.html">7 Zones</a>
+<a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="climate-time-machine.html">Time Machine</a>
+<a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="live-dashboard.html">Live Dashboard</a>
+<a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="my-impact.html">My Impact</a>
+<a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="eco-habit.html">Eco Habit</a>
+<a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="online-learning.html">Learning</a>
+<a class="text-secondary hover:text-primary-container transition-colors text-[13px] font-body-md whitespace-nowrap pb-1" href="climate-challenge.html">Challenge</a>
+</nav>
+<a class="bg-primary text-on-primary font-label-caps text-label-caps px-5 py-2.5 rounded-full hover:bg-primary-container transition-colors shrink-0 whitespace-nowrap" href="climate-challenge.html">JOIN THE CHALLENGE</a>
+</header>
+<aside class="fixed left-0 top-1/2 -translate-y-1/2 h-auto py-6 rounded-r-lg bg-transparent z-40 hidden md:flex flex-col gap-5 w-20">
+<nav class="flex flex-col gap-5">
+<a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="impact.html" title="Impact"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">thermostat</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Impact</span></a>
+<a class="flex flex-col items-center gap-1 text-primary border-r-4 border-primary pr-3 scale-95" href="zones.html" title="7 Zones"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">grid_view</span><span class="font-label-caps text-[9px] tracking-wide font-bold text-center leading-tight">7 Zones</span></a>
+<a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="climate-time-machine.html" title="Time Machine"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">visibility</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Time Machine</span></a>
+<a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="live-dashboard.html" title="Live Dashboard"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">analytics</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Live Dashboard</span></a>
+<a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="my-impact.html" title="My Impact"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">badge</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">My Impact</span></a>
+<a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="eco-habit.html" title="Eco Habit"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">task_alt</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Eco Habit</span></a>
+<a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="online-learning.html" title="Learning"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">school</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Learning</span></a>
+<a class="flex flex-col items-center gap-1 text-outline hover:text-primary-container pr-3 transition-all" href="climate-challenge.html" title="Challenge"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">emoji_events</span><span class="font-label-caps text-[9px] tracking-wide text-center leading-tight">Challenge</span></a>
+</nav>
+</aside>
+<header class="fixed top-0 w-full z-50 flex md:hidden items-center justify-between px-5 py-4 bg-surface/95 backdrop-blur-md border-b border-surface-variant">
+<a class="font-display-lg text-headline-md tracking-tighter text-on-surface" href="index.html">RE:IMAGINE</a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="flex items-center justify-center w-10 h-10 rounded-full border border-surface-variant text-on-surface" id="mobile-menu-btn" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<div class="fixed inset-0 z-[60] bg-surface hidden flex-col p-6 overflow-y-auto md:hidden" id="mobile-menu">
+<div class="flex items-center justify-between mb-6">
+<span class="font-display-lg text-headline-md text-on-surface">RE:IMAGINE</span>
+<button aria-label="Close menu" class="flex items-center justify-center w-10 h-10 rounded-full border border-surface-variant text-on-surface" id="mobile-menu-close" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="index.html">
+<span class="material-symbols-outlined text-primary">home</span>
+<span class="font-body-lg text-body-lg">Home</span>
+</a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="impact.html"><span class="material-symbols-outlined text-primary">thermostat</span><span class="font-body-lg text-body-lg">Impact</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-primary font-bold" href="zones.html"><span class="material-symbols-outlined text-primary">grid_view</span><span class="font-body-lg text-body-lg">7 Zones</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="climate-time-machine.html"><span class="material-symbols-outlined text-primary">visibility</span><span class="font-body-lg text-body-lg">Time Machine</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="live-dashboard.html"><span class="material-symbols-outlined text-primary">analytics</span><span class="font-body-lg text-body-lg">Live Dashboard</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="my-impact.html"><span class="material-symbols-outlined text-primary">badge</span><span class="font-body-lg text-body-lg">My Impact</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="eco-habit.html"><span class="material-symbols-outlined text-primary">task_alt</span><span class="font-body-lg text-body-lg">Eco Habit</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="online-learning.html"><span class="material-symbols-outlined text-primary">school</span><span class="font-body-lg text-body-lg">Learning</span></a>
+<a class="flex items-center gap-4 py-3 border-b border-surface-variant text-on-surface" href="climate-challenge.html"><span class="material-symbols-outlined text-primary">emoji_events</span><span class="font-body-lg text-body-lg">Challenge</span></a>
+<a class="mt-8 text-center bg-primary text-on-primary font-label-caps text-label-caps px-6 py-4 rounded-full" href="climate-challenge.html">JOIN THE CHALLENGE</a>
+</div>
+<script>
+(function() {
+    var btn = document.getElementById('mobile-menu-btn');
+    var closeBtn = document.getElementById('mobile-menu-close');
+    var menu = document.getElementById('mobile-menu');
+    if (!btn || !menu) return;
+    function openMenu() { menu.classList.remove('hidden'); menu.classList.add('flex'); btn.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+    function closeMenu() { menu.classList.add('hidden'); menu.classList.remove('flex'); btn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+    btn.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+})();
+</script>
+
+
+<main class="pt-24 md:pt-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
+<a class="inline-flex items-center gap-2 text-secondary hover:text-primary transition-colors mb-8 font-label-caps text-label-caps" href="zones.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span> BACK TO 7 ZONES
+</a>
+<section class="mb-12">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Zone 07</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mt-2 mb-4">Water &amp; Nature</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">Rainwater is collected from the pavilion roof, aerated by a solar-powered fountain, and cycled through a fish nursery before treated water is reused for irrigation, flushing and cleaning across the park.</p>
+</section>
+
+<section class="card rounded-3xl overflow-hidden mb-10">
+<model-viewer
+  id="park-scan"
+  src="assets/eco-park-3d-scan.glb"
+  camera-controls
+  auto-rotate
+  auto-rotate-delay="1500"
+  rotation-per-second="8deg"
+  shadow-intensity="0.6"
+  exposure="1.1"
+  environment-image="neutral"
+  camera-orbit="15deg 65deg 2.1m"
+  min-camera-orbit="auto 30deg auto"
+  max-camera-orbit="auto 90deg auto"
+  style="width:100%; height:60vh; min-height:420px; background:#F4F4F2;"
+  alt="3D photogrammetry scan of the Eco Park rainwater pond and aeration zone">
+</model-viewer>
+<div class="p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-surface-variant">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-1">A real 3D scan of this zone</h2>
+<p class="font-body-md text-body-md text-secondary max-w-xl">Captured by photogrammetry on site. Drag to rotate, scroll or pinch to zoom. Color is applied by elevation — blue for water, green for planting, warm tones for structure — since the raw scan carries no photographic texture yet.</p>
+</div>
+<span class="sim-tag shrink-0">Colorized · no photo texture</span>
+</div>
+</section>
+
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="card rounded-2xl p-6">
+<span class="material-symbols-outlined text-primary text-[28px] mb-3 block">water_drop</span>
+<h3 class="font-headline-md text-headline-md mb-2">Aeration pond</h3>
+<p class="font-body-md text-body-md text-secondary">A solar-powered fountain keeps the collected rainwater oxygenated before it moves on to the fish nursery.</p>
+</div>
+<div class="card rounded-2xl p-6">
+<span class="material-symbols-outlined text-primary text-[28px] mb-3 block">pets</span>
+<h3 class="font-headline-md text-headline-md mb-2">Fish nursery &amp; breeding area</h3>
+<p class="font-body-md text-body-md text-secondary">Circular tanks let visitors see the biological stage of the water cycle before treatment.</p>
+</div>
+<div class="card rounded-2xl p-6">
+<span class="material-symbols-outlined text-primary text-[28px] mb-3 block">recycling</span>
+<h3 class="font-headline-md text-headline-md mb-2">Treated water, reused</h3>
+<p class="font-body-md text-body-md text-secondary">Irrigation, toilet flushing, cleaning and landscape care across the park all draw from this loop.</p>
+</div>
+</section>
+</main>
+
+<!-- Site Footer (generated v2) -->
+<footer class="w-full py-16 bg-inverse-surface relative z-10 mt-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-6 mb-8 md:mb-0">
+<a class="font-display-lg text-headline-md text-surface-bright mb-3 inline-block" href="index.html">DENSO Eco Park</a>
+<p class="font-body-md text-body-md text-secondary-fixed-dim max-w-md">
+RE:IMAGINE — from learning to measurable impact. Data marked "Simulation" is illustrative pending live sensor integration.
+</p>
+</div>
+<div class="md:col-span-6 flex flex-wrap gap-6 md:justify-end items-end">
+<a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-primary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-primary-fixed transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-primary-fixed transition-colors" href="#">Sustainability Report</a>
+<a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-primary-fixed transition-colors" href="mailto:hello@densoecopark.example">Contact Us</a>
+</div>
+</div>
+</footer>
+
+
+</body></html>
